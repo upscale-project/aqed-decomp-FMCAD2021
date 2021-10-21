@@ -2,7 +2,7 @@
 
 AES<sup>1</sup> was decomposed into 8 sub-accelerators of which 7 have batch-size > 1 (considered for strong FC and intra-batch FC)   
 
-In each repository you will find 4 versions of the AES in Directories **AESv\<i\>** that we verified.  
+In each repository you will find 4 versions of the AES in directories **AESv\<i\>** that we verified.  
 
 In each **AESv\<i\>**  
 + **aes\_with\_pragma.c** - annotated AES  

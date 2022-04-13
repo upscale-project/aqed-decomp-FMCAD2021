@@ -200,8 +200,8 @@ void aes_expandEncKey(uint8_t *k, uint8_t *rc)
 /* -------------------------------------------------------------------------- */
 void aes256_encrypt_ecb(uint8_t k[32], uint8_t buf[16])
 {
-    aes256_context ctx_body;
-    aes256_context* ctx = &ctx_body;
+    struct aes256_context ctx_body;
+    struct aes256_context* ctx = &ctx_body;
     //INIT
     uint8_t rcon = 1;
     uint8_t i;
@@ -348,7 +348,6 @@ void workload( uint8_t* key, uint8_t* data, int size ) {
 
  
 uint8_t orig_val[INPUT_SIZE_OF_AES];  uint8_t dup_val[INPUT_SIZE_OF_AES]; uint8_t key[32]; uint16_t orig_in; uint8_t orig_key[UNROLL_FACTOR]; uint8_t orig_out[OUTPUT_SIZE_OF_AES]; bool orig_issued; bool dup_issued; uint16_t dup_in; uint16_t in_count; uint16_t out_count; bool orig_done; bool qed_done; bool qed_check;
-st state;
 
 
 struct out2{
